@@ -1,24 +1,30 @@
-import React  from 'react'
+import React,{useContext}  from 'react'
 import './Navstyle.css'
 import Profile from './profileImg.jpg'
 import Icon from './Writeicon.png'
-import Logo from './medium.png';
+
 import {Link} from 'react-router-dom';
-import SignUp from '../sign-up/sign-up.component'
+import { UserContext } from '../contexts/user.context';
+
 
 
 export default function Navbar() {
   
+  const {user,setUser} = useContext(UserContext)
+  console.log(user)
   
   return (
     <nav>
         <div className='nav-1'>
-        
-        <img src={Logo} className="logo"/>
+      
+        {/* <img src={Logo} className="logo"/>
         
         <div className='Searchbar'>
            <input type="text" placeholder="Search blog's here" />
-        </div>
+        </div> */}
+        <h2>Blogy</h2>
+        <p>{user?.email}</p>
+
         </div>
         <div className='nav-2'>
         

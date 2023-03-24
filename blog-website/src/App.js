@@ -8,10 +8,11 @@ import SignIn from './components/sign-in/sign-in.component';
 import Signup from './components/sign-up/sign-up.component';
 import YourBlog from './components/yourBlog/yourBlog.component';
 
+
 function App() {
   return (
     <Provider store={store}>
-      
+
     <div className="App">
     <Navbar/>
        <Routes>

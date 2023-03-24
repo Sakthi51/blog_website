@@ -5,6 +5,7 @@ import { publishBlogRequest } from "./redux/actions/actionCreators";
 import { UserContext } from "../contexts/user.context";
 
 const Write = () => {
+
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [hashtags, setHashtags] = useState('');
@@ -21,9 +22,14 @@ const Write = () => {
     const st = useSelector(state => state);
     const { user, setUser } = useContext(UserContext);
 
+
+
     useEffect(() => {
         console.log(st)
     }, [st]);
+
+    
+
     const onChangeTitle = (e) => {
         setTitle(e.target.value);
     }

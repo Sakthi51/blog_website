@@ -27,12 +27,14 @@ const Signup = () => {
         try{
            const user = await createUserWithEmailAndPassword(auth,userEmail,userPassword)
            console.log(user)
+           document.querySelector('.sign-up-email').value = " " 
+           document.querySelector('.sign-up-password').value = " " 
+           
         
         }catch(err){
             alert('Your email Already exists so kindly Login')
         }
         console.log(auth.currentUser)
-        
     }
 
 
@@ -50,10 +52,10 @@ const Signup = () => {
 
                 <div className="form-section">
                 <label>Your Email</label>
-                <input type="email" onChange={e => setUserEmail(e.target.value)}/>
+                <input type="email" onChange={e => setUserEmail(e.target.value)} className="sign-up-email"/>
 
                 <label>Your Password</label>
-                <input type="password" onChange={e => setUserPassword(e.target.value)}/>
+                <input type="password" onChange={e => setUserPassword(e.target.value) }  className="sign-up-password"/>
                 <button className="sign-up-button" onClick={handleSignUpSubmit}>Sign up</button>
                 <button onClick={handleSignOut}>Sign Out</button>
                 <p>{user?.email}</p>

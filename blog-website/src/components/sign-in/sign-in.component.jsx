@@ -15,8 +15,11 @@ const SignIn = () => {
    const handleSignIn =async () => {
     try{
         const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword)
-        setUser(user)
+        // setUser(user)
         console.log(user)
+        document.querySelector('.login-email').value = ""
+        document.querySelector('.login-password').value = ""
+
     }
     catch(err){
         alert('You are not a existing user so kindly Sign up your account')
@@ -31,10 +34,10 @@ const SignIn = () => {
 
                 <div className="form-section">
                     <label>Your Email</label>
-                    <input type="email" onChange={e => setLoginEmail(e.target.value)} />
+                    <input type="email" onChange={e => setLoginEmail(e.target.value)} className="login-email"/>
 
                     <label>Your Password</label>
-                    <input type="password" onChange={e => setLoginPassword(e.target.value)}/>
+                    <input type="password" onChange={e => setLoginPassword(e.target.value) } className="login-password"/>
                     <button onClick={handleSignIn}>Sign In</button>
                     <p>{user?.user?.email}</p>
                 </div>

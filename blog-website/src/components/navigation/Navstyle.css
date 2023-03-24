@@ -9,6 +9,13 @@ nav{
     color: black;
     /* background-color: bisque; */
 }
+
+.nav-1{
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+
 li{
     display: inline;
     justify-content: space-between;

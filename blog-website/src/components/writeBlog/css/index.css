@@ -28,9 +28,9 @@
     font-weight: 400;
     font-weight: 400;
     letter-spacing: -0.072px;
-    font-family: 'Times New Roman', Times, serif;
     overflow-wrap: break-word;
     text-rendering: optimizeLegibility;
+    font-family: 'Times New Roman', Times, serif;
     visibility: visible;
     word-break: break-word;
     border-style: none;
@@ -46,7 +46,6 @@
     width: 100px;
     border-radius: 20px;
     font: 14px sans-serif;
-    font-family: 'Times New Roman', Times, serif;
     letter-spacing: -0.072px;
     line-height: 28.4333px;
     cursor: pointer;
