@@ -1,0 +1,81 @@
+
+.login-signUp{
+    display: flex;
+}
+/* Sign-up_form */
+
+.sign-up-form, .sign-in-form{
+    width:45%;
+    background-color: white;
+    margin:50px auto 20px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:2em;
+    height:60%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+    
+
+
+}
+
+.sign-up-form h1, .sign-in-form h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 2em;
+}
+
+.sign-up-form h3, .sign-in-form h3{
+    font-family: 'Roboto', sans-serif;
+    font-family: 100;
+    font-size: 1.2em;
+    color:gray;
+
+}
+
+
+
+/* Form-Section */
+
+.form-section label{
+    font-family: 'Roboto', sans-serif;
+    font-family: 100;
+    font-size: .8em;
+    margin:1.5em 0;
+    color:rgb(141, 140, 140)
+
+}
+
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form-section input{
+    border:none;
+    border-bottom:2px solid rgb(188, 188, 188);
+    width:50%;
+    outline: none;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+.form-section button{
+    border:none;
+    padding:.6em 0;
+    width:150px;
+    font-size: 1em;
+    border-radius: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-top:2em;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+
+}
