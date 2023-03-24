@@ -58,7 +58,7 @@ const Signup = () => {
                 <input type="password" onChange={e => setUserPassword(e.target.value) }  className="sign-up-password"/>
                 <button className="sign-up-button" onClick={handleSignUpSubmit}>Sign up</button>
                 <button onClick={handleSignOut}>Sign Out</button>
-                <p>{user?.email}</p>
+                {/* <p>{user?.email}</p> */}
                 </div>
                
             </section>

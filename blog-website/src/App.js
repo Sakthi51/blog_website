@@ -7,6 +7,7 @@ import store from './components/writeBlog/redux/store/store'
 import SignIn from './components/sign-in/sign-in.component';
 import Signup from './components/sign-up/sign-up.component';
 import YourBlog from './components/yourBlog/yourBlog.component';
+import Maincontent from "./components/Maincontent/Content";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
     <Navbar/>
        <Routes>
+        <Route exact path="/" element={<Maincontent/>} />
         <Route exact path="/write" element={<Write/>} />
         <Route exact path="/sign-up" element={<Signup/>} />
         <Route exact path="/login" element={<SignIn/>} />

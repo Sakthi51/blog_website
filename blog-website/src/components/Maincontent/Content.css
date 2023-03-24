@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-
+/* 
 html {
   display: table;
   margin: auto;
@@ -15,7 +15,7 @@ html {
 body {
   display: table-cell;
   vertical-align: middle;
-}
+} */
 
 .membership-card-container {
   padding: 9px 0px;
