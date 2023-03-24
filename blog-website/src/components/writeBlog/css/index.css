@@ -1,0 +1,76 @@
+
+.writeContent{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 400px;
+    padding-top: 80px;
+}
+
+.titleName {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    visibility: visible;
+    word-break: break-word;
+    border-style: none;
+    outline: none;
+    width: 700px;
+}
+
+.descriptionContent{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 400;
+    letter-spacing: -0.072px;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    visibility: visible;
+    word-break: break-word;
+    border-style: none;
+    outline: none;
+    line-height: 28.4333px;
+    padding-top: 7px;
+    width: 700px;
+}
+
+.saveButton{
+    background: green;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font: 14px sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: -0.072px;
+    line-height: 28.4333px;
+    cursor: pointer;
+    border-style: none;
+    color: #f9f2f2;
+}
+ .saveButton:hover{
+    background: rgb(17, 193, 17);
+    transition-delay: 600;
+ }
+
+ .writePublish{
+    padding-left:400px;
+ }
+
+ textarea{
+    resize: none;
+ }
+
+ /* @media (max-width :600px) {
+    .writeContent{
+    padding-left: 200px;
+    padding-top: 80px;}
+ } */
+
+ 
