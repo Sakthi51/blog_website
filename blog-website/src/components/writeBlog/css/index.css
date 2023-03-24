@@ -23,7 +23,7 @@
     width: 700px;
 }
 
-.descriptionContent{
+.descriptionContent,.readTimeContent,.oneLinerContent,.imageUrlContent,.hashtagsContent{
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
