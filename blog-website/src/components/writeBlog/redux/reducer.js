@@ -1,15 +1,15 @@
 import { PUBLISH_BLOG_REQUEST } from "./actions/actionCreators";
 import { v4 as uuid } from 'uuid';
 
-const initialState =[{
-    title:null,
-    description:null}]
+const initialState =[]
 ;
 
 const writeBlogReducer = (state=initialState,action)=>{
     switch(action.type){
         case PUBLISH_BLOG_REQUEST:
-            return([...state,{id:uuid(),title:action.payload.title,description:action.payload.description}]);
+            var {user:{email}, title, description}= action.payload;
+
+            return([...state,{e_mail: email, id:uuid(),title: title,description: description}]);
         default:
             return state;    
     }

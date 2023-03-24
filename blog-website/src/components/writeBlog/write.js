@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./css/index.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { publishBlogRequest } from "./redux/actions/actionCreators";
+import { UserContext } from "../contexts/user.context";
 
 const Write = () => {
     const [title, setTitle] = useState('');
@@ -10,6 +11,8 @@ const Write = () => {
     const titleRef = useRef('');
     const descriptionRef = useRef('');
     const st = useSelector(state => state);
+    const {user,setUser} = useContext(UserContext);
+    
     useEffect(()=>{
         console.log(st) 
     },[st]);
@@ -21,7 +24,7 @@ const Write = () => {
 
     }
     const onClick = () => {
-        dispatch(publishBlogRequest(title, description));
+        dispatch(publishBlogRequest(title, description,user));
         titleRef.current.value = '';
         descriptionRef.current.value = '';
     }
