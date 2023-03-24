@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import Navbar from './components/navigation/Navbar';
 import './App.css';
+import {Route,Routes} from 'react-router-dom';
+import Write from './components/writeBlog/write';
+import { Provider } from 'react-redux';
+import store from './components/writeBlog/redux/store/store'
+import SignIn from './components/sign-in/sign-in.component';
+import Signup from './components/sign-up/sign-up.component';
+import YourBlog from './components/yourBlog/yourBlog.component';
 
 function App() {
   return (
+    <Provider store={store}>
+      
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar/>
+       <Routes>
+        <Route exact path="/write" element={<Write/>} />
+        <Route exact path="/sign-up" element={<Signup/>} />
+        <Route exact path="/login" element={<SignIn/>} />
+        <Route exact path="/your-blog" element={<YourBlog/>} />
+
+        
+    </Routes>
     </div>
+    </Provider>
   );
 }
 

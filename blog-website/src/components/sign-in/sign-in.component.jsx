@@ -2,7 +2,7 @@ import { useState,useContext } from "react"
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import { auth } from "../utils/firebase.config"
 
-import { UserContext, UserProvider } from "../contexts/user.context"
+import { UserContext } from "../contexts/user.context"
 
 const SignIn = () => {
     const [loginEmail,setLoginEmail] = useState('')
@@ -16,7 +16,7 @@ const SignIn = () => {
     try{
         const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword)
         setUser(user)
-        console.log(user.email)
+        console.log(user)
     }
     catch(err){
         alert('You are not a existing user so kindly Sign up your account')
@@ -36,7 +36,7 @@ const SignIn = () => {
                     <label>Your Password</label>
                     <input type="password" onChange={e => setLoginPassword(e.target.value)}/>
                     <button onClick={handleSignIn}>Sign In</button>
-                    <p>{user?.email}</p>
+                    <p>{user?.user?.email}</p>
                 </div>
            </section>
     )

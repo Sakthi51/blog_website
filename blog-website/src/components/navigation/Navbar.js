@@ -3,9 +3,12 @@ import './Navstyle.css'
 import Profile from './profileImg.jpg'
 import Icon from './Writeicon.png'
 import Logo from './medium.png';
+import {Link} from 'react-router-dom';
+import SignUp from '../sign-up/sign-up.component'
 
 
 export default function Navbar() {
+  
   
   return (
     <nav>
@@ -21,44 +24,14 @@ export default function Navbar() {
         
           <ul>
             <li><img className='Icon' src={Icon} alt='write'/></li>
-            <li><a href='index.html'>Write</a></li>
-            <li><a href='index.html'>Your blog's</a></li>
-            <li><a href='index.html'>About</a></li>
-            <li><a href='index.html'>Log in</a></li>
-            <li><a href='index.html'>Sign out</a></li>
+            <Link to='/write'>write</Link>
+            <Link to='/your-blog'>Your Blog</Link>
+            <Link to='/login'>Login</Link>
+            <Link to='/sign-up'>Sign Up</Link>
           </ul>
           <li><img className='Signin' src={Profile} alt='userImg' /></li>
           
-          
-          {/* <div className='sub-menu-wrap' id='subMenu'>
-            <div className='sub-menu'>
-                <div className='user-info'>
-                    <img src={Profile} alt='user-profile'/> 
-                    <h2>MythiliVenugopal</h2>
-                </div>
-                <hr/>
-                <a href='#' className='sub-menu-link'>
-                  <p>Profile</p>
-                  <span>></span>
-                </a>
-                <a href='#' className='sub-menu-link'>
-                  <p>Library</p>
-                  <span>></span>
-                </a>
-                <a href='#' className='sub-menu-link'>
-                  <p>Stories</p>
-                  <span>></span>
-                </a>
-                <a href='#' className='sub-menu-link'>
-                  <p>Status</p>
-                  <span>></span>
-                </a>
-                <a href='#' className='sub-menu-link'>
-                  <p>Logout</p>
-                  <span>></span>
-                </a>
-            </div>
-          </div> */}
+         
         </div>
     </nav>
   )
